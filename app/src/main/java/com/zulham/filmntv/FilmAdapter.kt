@@ -1,17 +1,14 @@
 package com.zulham.filmntv
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item.view.*
 
-class FilmAdapter (private val listItems: List<DataModel>, private val context: Context,
-                   private val mListener: OnItemClicked)
+class FilmAdapter(private val listItems: List<DataModel>, private val mListener: OnItemClicked)
     : RecyclerView.Adapter<FilmAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
