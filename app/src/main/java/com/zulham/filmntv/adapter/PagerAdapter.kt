@@ -1,4 +1,4 @@
-package com.zulham.filmntv
+package com.zulham.filmntv.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

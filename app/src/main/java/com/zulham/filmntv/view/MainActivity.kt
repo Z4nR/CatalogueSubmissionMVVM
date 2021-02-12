@@ -1,7 +1,9 @@
-package com.zulham.filmntv
+package com.zulham.filmntv.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.zulham.filmntv.adapter.PagerAdapter
+import com.zulham.filmntv.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

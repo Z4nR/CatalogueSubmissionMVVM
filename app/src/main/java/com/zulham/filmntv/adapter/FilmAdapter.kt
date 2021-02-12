@@ -1,4 +1,4 @@
-package com.zulham.filmntv
+package com.zulham.filmntv.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.zulham.filmntv.R
+import com.zulham.filmntv.model.DataModel
 import kotlinx.android.synthetic.main.item.view.*
 
 class FilmAdapter(private val listItems: List<DataModel>, private val mListener: OnItemClicked)
@@ -32,13 +34,13 @@ class FilmAdapter(private val listItems: List<DataModel>, private val mListener:
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item, parent, false)
         return ViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: FilmAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(listItems[position])
     }
 

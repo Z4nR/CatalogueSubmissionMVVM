@@ -1,4 +1,4 @@
-package com.zulham.filmntv
+package com.zulham.filmntv.model
 
 import android.os.Parcel
 import android.os.Parcelable

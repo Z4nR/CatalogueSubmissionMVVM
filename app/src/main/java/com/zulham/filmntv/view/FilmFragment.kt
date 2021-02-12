@@ -1,9 +1,7 @@
-package com.zulham.filmntv
+package com.zulham.filmntv.view
 
 import android.content.Intent
-import android.content.res.TypedArray
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +10,10 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.zulham.filmntv.model.DataModel
+import com.zulham.filmntv.adapter.FilmAdapter
+import com.zulham.filmntv.viewmodel.FilmViewModel
+import com.zulham.filmntv.R
 import kotlinx.android.synthetic.main.fragment_film.*
 
 private const val ARG_PARAM1 = "param1"
@@ -53,7 +55,7 @@ class FilmFragment : Fragment() {
 
     private fun recyclerV(films: ArrayList<DataModel>){
         recyclerV_movie.apply {
-            adapter = FilmAdapter(films, object : FilmAdapter.OnItemClicked{
+            adapter = FilmAdapter(films, object : FilmAdapter.OnItemClicked {
                 override fun onItemClick(position: Int) {
                     Toast.makeText(context, films[position].title+" Clicked", Toast.LENGTH_SHORT).show()
                     val intent = Intent(context, DetailActivity::class.java)

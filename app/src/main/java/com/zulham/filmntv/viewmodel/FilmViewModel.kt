@@ -1,8 +1,10 @@
-package com.zulham.filmntv
+package com.zulham.filmntv.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.zulham.filmntv.model.DataFilm
+import com.zulham.filmntv.model.DataModel
 
 
 class FilmViewModel: ViewModel() {
