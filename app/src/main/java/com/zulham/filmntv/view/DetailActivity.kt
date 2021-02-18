@@ -24,7 +24,7 @@ class DetailActivity : AppCompatActivity() {
 
         movie?.let { detailViewModel.setDetail(it) }
 
-        detailViewModel.getDetai().observe(this, {
+        detailViewModel.getDetail().observe(this, {
             movie?.let { showDetail(it) }
         })
 
@@ -32,11 +32,11 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun showDetail(mov: DataModel){
-        mov?.let { img_poster_detail.setImageResource(it.img) }
-        title_detail.text = mov?.title
-        genre_detail.text = mov?.genre
-        release_detail.text = mov?.releaseDate
-        ph_detail.text = mov?.production
-        desc_detail.text = mov?.desc
+        mov.let { img_poster_detail.setImageResource(it.img) }
+        title_detail.text = mov.title
+        genre_detail.text = mov.genre
+        release_detail.text = mov.releaseDate
+        ph_detail.text = mov.production
+        desc_detail.text = mov.desc
     }
 }

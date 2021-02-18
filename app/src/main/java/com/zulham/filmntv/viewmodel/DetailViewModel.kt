@@ -20,7 +20,7 @@ class DetailViewModel: ViewModel() {
         detailShow.postValue(movie)
     }
 
-    fun getDetai(): LiveData<DataModel> {
+    fun getDetail(): LiveData<DataModel> {
         return detailShow
     }
 }

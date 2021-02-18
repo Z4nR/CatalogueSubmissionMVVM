@@ -8,6 +8,7 @@ import com.zulham.filmntv.model.DataModel
 
 
 class FilmViewModel: ViewModel() {
+
     private val listFilm = MutableLiveData<ArrayList<DataModel>>()
 
     fun setData(){
